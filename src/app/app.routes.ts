@@ -1,7 +1,6 @@
-import { Routes, RouterModule } from '@angular/router';
-import { NoContent } from './no-content';
-import { IssuesComponent } from './issues';
+import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard';
+import { IssuesComponent } from './issues';
 import { ProfileComponent } from './profile';
 import { SigninComponent } from './signin';
 /**
@@ -9,9 +8,9 @@ import { SigninComponent } from './signin';
  * (do not place feature module routes here, use an own -routing.module.ts in the feature instead)
  */
 export const AppRoutes: Routes = [
-    { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'issues',  component: IssuesComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
     { path: 'dashboard',  component: DashboardComponent },
+    { path: 'issues',  component: IssuesComponent },
     { path: 'profile',  component: ProfileComponent },
     { path: 'signin',  component: SigninComponent }
 ];

@@ -10,12 +10,13 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LabelClass } from './label.directive';
 
 @Component({
-  selector: 'issues',
-  encapsulation: ViewEncapsulation.None,
-  providers: [
+    moduleId: module.id,
+    selector: 'issues',
+    encapsulation: ViewEncapsulation.None,
+    providers: [
     GithubService,
     IssuesProcessor
-  ],
+    ],
   templateUrl: './issues.template.html'
 })
 export class IssuesComponent {
@@ -72,10 +73,3 @@ export class IssuesComponent {
         }
     }
 }
-
-@NgModule({
-    declarations: [IssuesComponent, MarkdownComponent, LabelClass],
-    imports: [GridModule, ButtonsModule, CommonModule]
-})
-
-export class IssuesModule {}

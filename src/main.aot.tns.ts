@@ -5,6 +5,14 @@ import { AppModuleNgFactory } from './app/app.module.ngfactory';
 import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 
+import {
+  rendererTraceCategory
+} from 'nativescript-angular/trace';
+
+import { setCategories, enable } from 'trace';
+setCategories(`${rendererTraceCategory}`);
+enable();
+
 if (environment.production) {
   enableProdMode();
 }

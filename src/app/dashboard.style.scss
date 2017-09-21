@@ -56,13 +56,10 @@ kendo-tabstrip {
 	}
 }
 
-
-
-
 // Nav
 #nav {
-	padding-left: $grid-gutter-width * 1.5;
-	padding-right: $grid-gutter-width * 1.5;
+	padding-left: 20px; // $grid-gutter-width * 1.5;
+	padding-right: 20px; // $grid-gutter-width * 1.5;
 	width: 320px;
 	box-sizing: border-box;
 	flex-basis: auto;
@@ -74,29 +71,29 @@ kendo-tabstrip {
 	#app-title { position: relative; }
 	#app-title::after {
 		content: "";
-		width: $spacer * 1.5;
-		border-bottom: 2px solid $brand-primary;
+		width: 5px;
+		border-bottom: 2px solid red;
 		position: absolute;
 		left: 0;
-		top: $font-size-h1 + $font-size-h2 + ( $spacer * 1.5 );
+		top: 50px;
 	}
 
 	hr { border: 0; }
 	.h4 {
-		font-size: $font-size-xs;
+		font-size: 10px;
 		font-weight: 400;
 		text-transform: uppercase;
 		opacity: .3;
 	}
 
 	.nav-pills {
-		margin-left: -( $grid-gutter-width * 1.5 );
-		margin-right: -( $grid-gutter-width * 1.5 );
+		margin-left: -20px;
+		margin-right: -20px;
 		font-size: 1.125rem;
 	}
 	.nav-pills .nav-link {
-		padding-left: $grid-gutter-width * 1.5;
-		padding-right: $grid-gutter-width * 1.5;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.nav-pills .nav-link:not(.active) {
 		color: inherit;
@@ -109,23 +106,23 @@ kendo-tabstrip {
 }
 #app-subtitle {
 	margin: 0;
-	font-size: $font-size-xs;
+	font-size: 10px;
 	font-weight: 100;
 	text-transform: uppercase;
 	opacity: .75;
 }
 #copy {
 	color: #9195a2;
-	font-size: $font-size-sm;
+	font-size: 12px;
 	position: relative;
 }
 #copy::after {
 	content: "";
-	width: $spacer * 1.5;
+	width: 5px;
 	border-top: 2px solid;
 	position: absolute;
 	left: 0;
-	top: -( $spacer * 1.5 );
+	top: -5px;
 }
 
 .top-bar {
@@ -149,20 +146,18 @@ kendo-tabstrip {
 	cursor: pointer;
 }
 
-
-
-@media (max-width: map-get($grid-breakpoints, md) ) {
-	#nav {
-		width: 320px;
-		max-width: none;
-		transform: translateX(-100%);
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		box-shadow: 0 $spacer $spacer rgba( $brand-inverse, .5 );
-	}
-}
+// @media (max-width: map-get(500px, md) ) {
+// 	#nav {
+// 		width: 320px;
+// 		max-width: none;
+// 		transform: translateX(-100%);
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		bottom: 0;
+// 		box-shadow: 0 2px 2px rgba( 100, 100, 100, .5 );
+// 	}
+// }
 
 
 
@@ -188,7 +183,7 @@ main {
 
 
 	.card {
-		margin-top: $spacer * 1.5;
+		margin-top: 5px;
 	}
 	.card-block {
 		position: relative;
@@ -295,8 +290,8 @@ main {
 
 // Signin
 .signin {
-	margin: -( $spacer * 1.5 );
-	padding: $spacer * 1.5;
+	margin: -5px;
+	padding: 5px;
 	width: 100vw;
 	height: 100vh;
 	box-sizing: border-box;

@@ -8,7 +8,7 @@ import { IssuesProcessor } from '../../../shared/issues-processor.service'
 import { IssueTypesComponent } from '../charts/issue-types.component';
 import { TypesDistributionComponent } from '../charts/types-distribution.component';
 import { ActiveIssuesComponent } from '../charts/active-issues.component';
-import { StatisticsComponent } from '../charts/statistics.component'
+import { StatisticsComponent } from '../charts/statistics.component';
 
 import { IssuesModel } from '../../../shared/issues.model';
 import { ChartsModule } from '@progress/kendo-angular-charts';
@@ -19,6 +19,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
 import 'hammerjs';
 
 @Component({
+    moduleId: module.id,
     selector: 'dashboard',
     providers: [GithubService, IssuesProcessor],
     encapsulation: ViewEncapsulation.None,
@@ -86,10 +87,3 @@ export class DashboardComponent {
         }
     }
 }
-
-@NgModule({
-    declarations: [DashboardComponent, ActiveIssuesComponent, TypesDistributionComponent, IssueTypesComponent, StatisticsComponent],
-    imports: [ChartsModule, ButtonsModule, LayoutModule, CommonModule]
-})
-
-export class DashboardModule {}

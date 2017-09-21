@@ -7,6 +7,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { Router } from '@angular/router';
 
 @Component({
+    moduleId: module.id,
     selector: 'profile',
     encapsulation: ViewEncapsulation.None,
     providers: [GithubService],
@@ -43,11 +44,3 @@ export class ProfileComponent {
         this.deleteDialogVisible = false;
     }
 }
-
-
-@NgModule({
-    declarations: [ProfileComponent],
-    imports: [CommonModule, DialogModule, InputsModule, ButtonsModule]
-})
-
-export class ProfileModule {}

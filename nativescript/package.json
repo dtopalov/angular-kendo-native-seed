@@ -8,7 +8,7 @@
       "version": "3.1.0"
     },
     "tns-android": {
-      "version": "3.1.1"
+      "version": "3.2.0"
     }
   },
   "dependencies": {
@@ -23,11 +23,13 @@
     "@angular/router": "~4.1.0",
     "@ngx-translate/core": "^6.0.1",
     "@ngx-translate/http-loader": "0.0.3",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#95f37e4c402df37db16781995ffa1592032df9c8",
     "nativescript-angular": "^3.0.0",
     "nativescript-theme-core": "~1.0.2",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~5.3.0",
     "tns-core-modules": "^3.0.0",
+    "trace": "^3.0.0",
     "typescript": "~2.2.0",
     "zone.js": "~0.8.2"
   },

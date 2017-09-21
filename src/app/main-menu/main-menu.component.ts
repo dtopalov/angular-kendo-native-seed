@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
-    selector: 'maestro-app',
-    templateUrl: './app.component.html',
+    selector: 'seed-main-menu',
+    templateUrl: './main-menu.component.html',
     animations: [trigger(
         'toggleNav',
         [
@@ -22,10 +22,10 @@ import { Router } from '@angular/router';
     )],
     encapsulation: ViewEncapsulation.None,
     styleUrls: [
-       './app.style.css'
+       './../app.style.css'
     ],
 })
-export class AppComponent {
+export class MainMenuComponent {
     private year = new Date().getFullYear();
     private navState: string;
     constructor(private router: Router) {

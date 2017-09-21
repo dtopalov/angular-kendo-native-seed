@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
+    moduleId: module.id,
     selector: 'signin',
     encapsulation: ViewEncapsulation.None,
     templateUrl: './signin.template.html'
@@ -23,11 +24,3 @@ export class SigninComponent {
         this.router.navigate(['/dashboard']);
     }
 }
-
-
-@NgModule({
-    declarations: [SigninComponent],
-    imports: [CommonModule]
-})
-
-export class SigninModule {}

@@ -7,9 +7,9 @@
     </div>
     <div class="col-sm text-sm-right">
         <kendo-buttongroup [selection]="'single'">
-            <button kendoButton (click)="onFilterClick(3)" [selected]="true">3 Months</button>
-            <button kendoButton (click)="onFilterClick(6)">6 Months</button>
-            <button kendoButton (click)="onFilterClick(12)">1 Year</button>
+            <button kendoButton [togglable]="true" (click)="onFilterClick(3)" [selected]="true">3 Months</button>
+            <button kendoButton [togglable]="true" (click)="onFilterClick(6)">6 Months</button>
+            <button kendoButton [togglable]="true" (click)="onFilterClick(12)">1 Year</button>
         </kendo-buttongroup>
     </div>
 </div>

@@ -55,8 +55,11 @@
     </kendo-grid-column>
     <ng-template kendoGridDetailTemplate let-dataItem let-rowIndex="rowIndex">
         <div class="row my-4">
-            <div class="col-xs">
-                <span class="tag" [ngClass]="{'tag-success': dataItem.state === 'open', 'tag-danger': dataItem.state === 'closed'}">{{ dataItem.state }}</span>
+            <div class="col-sm-12">
+                <span class="badge" [ngClass]="{
+                    'badge-success': dataItem.state === 'open',
+                    'badge-danger': dataItem.state === 'closed'
+                }">{{ dataItem.state }}</span>
                 <h3 class="h1">
                     {{ dataItem.title }}
                     <span class="text-muted">#{{ dataItem.number }}</span>

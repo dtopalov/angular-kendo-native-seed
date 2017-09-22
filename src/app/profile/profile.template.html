@@ -103,14 +103,14 @@
         </div>
     </div>
 
-    <kendo-dialog title="Thank you" *ngIf="profileDialogVisible" (onClose)="onProfileDialogClose()">
+    <kendo-dialog title="Thank you" *ngIf="profileDialogVisible" (close)="onProfileDialogClose()">
         <p>Your profile has been successfully updated</p>
         <kendo-dialog-actions>
             <button kendoButton (click)="onProfileDialogClose()">OK</button>
         </kendo-dialog-actions>
     </kendo-dialog>
 
-    <kendo-dialog title="Are you sure you want to do this?" *ngIf="deleteDialogVisible" (onClose)="onDeleteDialogClose()">
+    <kendo-dialog title="Are you sure you want to do this?" *ngIf="deleteDialogVisible" (close)="onDeleteDialogClose()">
         <p>Account deletetion cannot be undone!</p>
         <kendo-dialog-actions>
             <button kendoButton (click)="onDeleteDialogClose()">Cancel</button>

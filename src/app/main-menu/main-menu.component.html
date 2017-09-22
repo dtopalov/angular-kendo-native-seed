@@ -1,8 +1,8 @@
 <div class="row">
-  <div id="top-bar" class="top-bar col-xs-12 bg-inverse hidden-md-up"></div>
+  <div id="top-bar" class="top-bar col-xs-12 bg-inverse d-none d-md-block"></div>
   <div id="nav" class="col-xs-3 bg-inverse text-white py-5 k-vbox"
       [@toggleNav]="navState" *ngIf="showNav()">
-      <span id="nav-toggle" class="nav-toggle hidden-md-up"
+      <span id="nav-toggle" class="nav-toggle d-md-none"
           (click)="toggleNav()">
           <span class="k-icon k-i-hamburger"></span>
       </span>
@@ -10,7 +10,7 @@
       <p id="app-subtitle">Sample Dashboard</p>
       <hr />
       <p class="h4 mt-5">Project</p>
-      <ul class="nav nav-pills nav-stacked">
+      <ul class="nav nav-pills flex-column">
           <li class="nav-item" id="dashbaord">
               <a [routerLink]=" ['./dashboard'] " class="nav-link" routerLinkActive="active">Dashboard</a>
           </li>
@@ -19,7 +19,7 @@
           </li>
       </ul>
       <p class="h4 mt-5">Account</p>
-      <ul class="nav nav-pills nav-stacked">
+      <ul class="nav nav-pills flex-column">
           <li class="nav-item" id="profile">
               <a [routerLink]=" ['./profile'] " class="nav-link" routerLinkActive="active">My Profile</a>
           </li>

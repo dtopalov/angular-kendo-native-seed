@@ -5,7 +5,6 @@
             {{ rangeStart | date }} - {{ today | date }}
         </h2>
     </div>
-    <span class="col-sm-1 hidden-sm-down"></span>
     <div class="col-sm text-sm-right">
         <kendo-buttongroup [selection]="'single'">
             <button kendoButton (click)="onFilterClick(3)" [selected]="true">3 Months</button>

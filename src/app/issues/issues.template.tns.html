@@ -2,7 +2,8 @@
 <GridLayout class="issue-container" rows="auto auto auto *">
   <!-- <SegmentedBar [items]='filters' [(ngModel)]='selectedFilter'></SegmentedBar> -->
 
-  <SearchBar [(ngModel)]='search' row="1"></SearchBar>
+  <SearchBar [(ngModel)]="search" row="1"></SearchBar>
+  <SearchBar [(ngModel)]="search" row="2"></SearchBar>
 
   <StackLayout *ngIf="(filter$ | async) === 3" orientation="horizontal" row="2" margin="12">
     <Label text="Filtering by "></Label>

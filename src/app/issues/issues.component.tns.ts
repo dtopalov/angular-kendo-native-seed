@@ -41,10 +41,7 @@ export interface Issue {
     moduleId: module.id,
     selector: 'issues',
     templateUrl: './issues.template.html',
-    providers: [
-      GithubService,
-      IssuesProcessor
-    ]
+    styleUrls: ['./../../app.android.scss'],
 })
 export class IssuesComponent {
     filters = [
@@ -94,6 +91,7 @@ export class IssuesComponent {
         .do(() => this.loading = true)
         .debounceTime(300)
         .do(() => this.loading = false)
+        .do((...args) =>(console.log(args)))
         .map(([issues, filter, search, user]) => {
           if (!issues) {
             return [];
